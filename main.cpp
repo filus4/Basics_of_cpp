@@ -3,19 +3,18 @@
 
 using namespace std;
 
-void say_hi(string name, int age); // signature to tell c++ about functions below main() funcion
+double cube(double num) {
+    double result = num * num * num;
+    return result;
+}   
 
 int main() {
 
-    say_hi("Mike", 21);
-    say_hi("Tom", 56);
-    say_hi("Steve", 42);
+    double answer = cube(5.0);
+    cout << answer << endl;
+
+    cout << cube(2.5);
     
 
     return 0;
-}
-
-void say_hi(string name, int age) {
-    cout << "Hello " << name << "." << endl;
-    cout << "It seems that you are " << age << " years old." << endl;
 }
