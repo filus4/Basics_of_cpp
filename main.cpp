@@ -4,17 +4,11 @@ using namespace std;
 
 int main() {
 
-    string charakter_name = "Tom";
-    int charakter_age;
-    charakter_age = 50;
-
-    cout << "There once was a man named " << charakter_name << endl;
-    cout << "He was "<< charakter_age << " years old" << endl;
-
-    charakter_name = "Mike";
-    
-    cout << "He liked the name " << charakter_name << endl;
-    cout << "But he did not like being " << charakter_age << endl;
+    char grade = 'A';
+    string phrase = "Giraffe Academy";
+    int age = 50;
+    double gpa = 2.3;  // doubles can store more decimal points so they can be more specific than float numbers
+    bool is_male = true;
 
     return 0;
 }
