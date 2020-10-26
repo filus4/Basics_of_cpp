@@ -1,24 +1,15 @@
 #include <iostream>
-#include <string>
+#include <cmath>
 
 using namespace std;
 
 int main() {
 
-    string color, plural_noun, celebrity;  
-    cout << "Enter a color: " << endl;
-    getline(cin, color);
+    int lucky_nums[20] = {4, 8, 15, 16, 23, 42};
 
-    cout << "Enter a plural noun: " << endl;
-    getline(cin, plural_noun);
+    lucky_nums[10] = 100;
 
-    cout << "Enter a celebrity: " << endl;
-    getline(cin, celebrity);
-    
-
-    cout << "Roses are "<< color << endl;
-    cout << plural_noun << " are blue" << endl;
-    cout << "I love " << celebrity << endl;
+    cout << lucky_nums[10];
 
     return 0;
 }
