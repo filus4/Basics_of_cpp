@@ -3,23 +3,36 @@
 
 using namespace std;
 
-int get_max(int num_1,int num_2, int num_3) {
-    int result;
-
-    if (num_1 >= num_2 && num_1 >= num_3) {
-        result = num_1;
-    } else if (num_2 >= num_1 && num_2 >= num_3) {
-        result = num_2;
-    } else {
-        result = num_3;
-    }
-
-    return result;
-}
 
 int main() {
 
-    cout << get_max(5, -1, 20);
+   double num_1, num_2;
+   char op;
+
+   cout << "Enter first number: ";
+   cin >> num_1;
+
+   cout << "Enter operator: ";
+   cin >> op;
+
+   cout << "Enter second number: ";
+   cin >> num_2;
+
+   double result = 0;
+
+    if (op == '+') {
+        result = num_1 + num_2;
+    } else if (op == '-') {
+        result = num_1 - num_2;
+    } else if (op == '*') {
+        result = num_1 * num_2;
+    } else if (op == '/') {
+        result = num_1 / num_2;
+    } else {
+        cout << "Invalid Operator";
+    }
+
+    cout << result << endl;
 
     return 0;
 }
