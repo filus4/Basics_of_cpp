@@ -3,10 +3,7 @@
 
 using namespace std;
 
-void say_hi(string name, int age) {
-    cout << "Hello " << name << "." << endl;
-    cout << "It seems that you are " << age << " years old." << endl;
-}
+void say_hi(string name, int age); // signature to tell c++ about functions below main() funcion
 
 int main() {
 
@@ -16,4 +13,9 @@ int main() {
     
 
     return 0;
+}
+
+void say_hi(string name, int age) {
+    cout << "Hello " << name << "." << endl;
+    cout << "It seems that you are " << age << " years old." << endl;
 }
