@@ -5,15 +5,20 @@ using namespace std;
 
 int main() {
 
-    double num_1, num_2;
-    cout << "Enter first number: ";
-    cin >> num_1;
+    string color, plural_noun, celebrity;  
+    cout << "Enter a color: " << endl;
+    getline(cin, color);
 
-    cout << "Enter second number: ";
-    cin >> num_2;
+    cout << "Enter a plural noun: " << endl;
+    getline(cin, plural_noun);
 
-    cout << num_1 + num_2;
+    cout << "Enter a celebrity: " << endl;
+    getline(cin, celebrity);
+    
 
+    cout << "Roses are "<< color << endl;
+    cout << plural_noun << " are blue" << endl;
+    cout << "I love " << celebrity << endl;
 
     return 0;
 }
