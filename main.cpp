@@ -3,22 +3,23 @@
 
 using namespace std;
 
+int get_max(int num_1,int num_2, int num_3) {
+    int result;
+
+    if (num_1 >= num_2 && num_1 >= num_3) {
+        result = num_1;
+    } else if (num_2 >= num_1 && num_2 >= num_3) {
+        result = num_2;
+    } else {
+        result = num_3;
+    }
+
+    return result;
+}
 
 int main() {
 
-    bool is_male = false;
-    bool is_tall = false;
-
-    if (is_male && is_tall) {  // && --> and  ,   || --> or
-        cout << "You are a tall male.";
-    } else if (is_male && !is_tall) {
-        cout << "You are a short male.";
-    } else if (!is_male && is_tall) {
-        cout << "You are tall but not a male.";
-    } else {
-        cout << "You are neither male nor tall.";
-    }
-    
+    cout << get_max(5, -1, 20);
 
     return 0;
 }
