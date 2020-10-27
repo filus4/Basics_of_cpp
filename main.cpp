@@ -1,33 +1,39 @@
 #include <iostream>
 using namespace std;
 
-class Student {
+class Moovie {
+    private:
+        string rating;
     public:
-        string name;
-        string major;
-        double gpa;
+        string title;
+        string director;
 
-        Student (string a_name, string a_major, double a_gpa) {
-            name = a_name;
-            major = a_major;
-            gpa = a_gpa;
+        Moovie (string a_title, string a_director, string a_rating) {
+            title = a_title;
+            director = a_director;
+            set_rating(a_rating);
         }
 
-        bool has_honors () {
-            if (gpa >= 3.5) {
-                return true;
+        void set_rating (string a_rating) {
+            if (a_rating == "G" || a_rating == "PG" || a_rating == "PG-13" || a_rating == "R" || a_rating == "NR") {
+                    rating = a_rating;
             } else {
-                return false;
+                rating = "NR";
             }
-        }   
+        }
+
+        string get_rating () {
+            return rating;
+        }
 };
 
 int main() {
 
-      Student student_1("Jim", "Business", 2.4);
-      Student student_2("Pam", "Art", 3.6);
+      Moovie avengers("The Avengers", "Joss Whedon", "PG-13");
+      
+      avengers.set_rating("PG");
 
-      cout << student_2.has_honors();
+      cout << avengers.get_rating();
 
     return 0;
 }
