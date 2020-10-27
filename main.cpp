@@ -4,16 +4,29 @@ using namespace std;
 
 int main() {
 
-    int index = 6;
-    while(index <= 5) {
-        cout << index << endl;
-        index++;
+    int secret_num = 7;
+    int guess;
+    int guess_count = 0;
+    int guess_limit = 3;
+    bool out_of_guesses = false;
+
+
+    while (secret_num != guess && !out_of_guesses) {
+        if(guess_count < guess_limit){
+            cout << "Enter guess: ";
+        cin >> guess;
+        guess_count++;
+        } else {
+            out_of_guesses = true;
+        }        
     }
 
-    do { 
-        cout << index << endl;
-        index++;
-    } while(index <= 5);
-
+    if(out_of_guesses) {
+        cout << "You Lose!";
+    } else {
+        cout << "You Win!" << endl;
+    }
+    
+    
     return 0;
 }
