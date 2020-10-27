@@ -4,29 +4,10 @@ using namespace std;
 
 int main() {
 
-    int secret_num = 7;
-    int guess;
-    int guess_count = 0;
-    int guess_limit = 3;
-    bool out_of_guesses = false;
-
-
-    while (secret_num != guess && !out_of_guesses) {
-        if(guess_count < guess_limit){
-            cout << "Enter guess: ";
-        cin >> guess;
-        guess_count++;
-        } else {
-            out_of_guesses = true;
-        }        
+    int nums[] = {1, 2, 5, 7, 3};
+    for (int i = 0; i < 5; i++) {
+        cout << nums[i] << endl;
     }
-
-    if(out_of_guesses) {
-        cout << "You Lose!";
-    } else {
-        cout << "You Win!" << endl;
-    }
-    
     
     return 0;
 }
