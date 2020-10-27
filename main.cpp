@@ -1,38 +1,42 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
+string get_day_of_week(int day_num) {
+    string day_name;
+
+    switch(day_num) {
+        case 0:
+            day_name = "Sunday";
+            break;
+        case 1:
+            day_name = "Monday";
+            break;
+        case 2:
+            day_name = "Tuesday";
+            break;
+        case 3:
+            day_name = "Wednesday";
+            break;
+        case 4:
+            day_name = "Thursday";
+            break;
+        case 5:
+            day_name = "Friday";
+            break;
+        case 6:
+            day_name = "Saturday";
+            break;
+        default:
+        day_name = "Invalid Day Number";
+    }
+
+    return day_name;
+}
 
 int main() {
 
-   double num_1, num_2;
-   char op;
-
-   cout << "Enter first number: ";
-   cin >> num_1;
-
-   cout << "Enter operator: ";
-   cin >> op;
-
-   cout << "Enter second number: ";
-   cin >> num_2;
-
-   double result = 0;
-
-    if (op == '+') {
-        result = num_1 + num_2;
-    } else if (op == '-') {
-        result = num_1 - num_2;
-    } else if (op == '*') {
-        result = num_1 * num_2;
-    } else if (op == '/') {
-        result = num_1 / num_2;
-    } else {
-        cout << "Invalid Operator";
-    }
-
-    cout << result << endl;
+    cout << get_day_of_week(12);
 
     return 0;
 }
