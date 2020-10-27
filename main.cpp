@@ -7,23 +7,26 @@ class Book {
         string author;
         int pages;
 
+        Book () {
+            title = "No Title";
+            author = "No Author";
+            pages = 0;
+        }
+
+        Book (string a_title, string a_author, int a_pages) {
+            title = a_title;
+            author = a_author;
+            pages = a_pages;
+        }
+
 };
 
 int main() {
 
-    Book book1;
-    book1.title = "Harry Potter";
-    book1.author = "JK Rowling";
-    book1.pages = 500;
+    Book book1("Harry Potter", "JK Rowling", 500);
+    Book book2("Lord of the Rings", "Tolkien", 700);
 
-    Book book2;
-    book2.title = "Lord of the Rings";
-    book2.author = "Tolkein";
-    book2.pages = 700;
-    book2.title = "Hunger Games";
-
-    cout << book1.pages;
-    cout << book2.author;
+    cout << book1.title << endl;    
 
     return 0;
 }
