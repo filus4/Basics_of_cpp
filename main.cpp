@@ -1,28 +1,29 @@
 #include <iostream>
-
 using namespace std;
 
-/*
-    cout << "Age: " << &age << endl;
-    cout << "Gpa: " << &gpa << endl;
-    cout << "Name: " << &name << endl;
-*/
+class Book {
+    public:
+        string title;
+        string author;
+        int pages;
+
+};
 
 int main() {
 
-    int age = 19;
-    int *pAge = &age; // storing a pointer in variable
+    Book book1;
+    book1.title = "Harry Potter";
+    book1.author = "JK Rowling";
+    book1.pages = 500;
 
-    double gpa = 2.7;
-    double *pGpa = &gpa;
+    Book book2;
+    book2.title = "Lord of the Rings";
+    book2.author = "Tolkein";
+    book2.pages = 700;
+    book2.title = "Hunger Games";
 
-    string name = "Mike";
-    string *pName = &name;
-
-    cout << pAge << endl; 
-
-    cout << *pAge << endl; // dereferencing pointer
-    cout << *&gpa; // its possible to join * and & together
+    cout << book1.pages;
+    cout << book2.author;
 
     return 0;
 }
