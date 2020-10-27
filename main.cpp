@@ -1,39 +1,37 @@
 #include <iostream>
 using namespace std;
 
-class Moovie {
-    private:
-        string rating;
+class Chef {                                                    // Super class ---> Main class
+    public:                                                     // Sub class ---> Class which inherited other class
+        void make_chicken() {
+            cout << "The chef makes yummy chicken" << endl;
+        }
+        void make_salad() {
+            cout << "The chef makes salad" << endl;
+        }
+        void make_special_dish() {
+            cout << "The chef makes bbq ribs" << endl;
+        }
+};
+
+class Italian_Chef : public Chef { // inheriting from other class
     public:
-        string title;
-        string director;
-
-        Moovie (string a_title, string a_director, string a_rating) {
-            title = a_title;
-            director = a_director;
-            set_rating(a_rating);
+        void make_pasta() {
+            cout << "The chef makes pasta" << endl;
         }
-
-        void set_rating (string a_rating) {
-            if (a_rating == "G" || a_rating == "PG" || a_rating == "PG-13" || a_rating == "R" || a_rating == "NR") {
-                    rating = a_rating;
-            } else {
-                rating = "NR";
-            }
-        }
-
-        string get_rating () {
-            return rating;
+        void make_special_dish() {                  // overwriting a function from inherited class
+            cout << "The chef makes pizza" << endl;
         }
 };
 
 int main() {
 
-      Moovie avengers("The Avengers", "Joss Whedon", "PG-13");
-      
-      avengers.set_rating("PG");
+    Chef chef;
+    chef.make_special_dish(); 
 
-      cout << avengers.get_rating();
+    Italian_Chef italian_chef;
+    italian_chef.make_special_dish();
+    
 
     return 0;
 }
